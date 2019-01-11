@@ -13,6 +13,16 @@ TriggerSleep:
     sleep_time: 5
     message_time: 3
 
+# -----
+# Ansible
+# -----
+
+RunAnsiblePlaybook:
+    source:
+      pkg: genie.libs.sdk
+      class: triggers.ansible.ansible.RunAnsiblePlaybook
+    devices: ['uut']
+
 # ==============================================================================
 #                               FEATURE: OSPF
 # ==============================================================================
@@ -111,7 +121,7 @@ TriggerClearIpRouteAll:
     source:
       pkg: genie.libs.sdk
       class: triggers.clear.bgp.clear.TriggerClearIpRouteAll
-      
+
 # ---------------
 # UNCONFIG-CONFIG
 # ---------------
@@ -412,8 +422,8 @@ TriggerAddRemoveBgpRedistributeConnected:
 TriggerAddRemoveBgpRedistributeStatic:
     source:
       pkg: genie.libs.sdk
-      class: triggers.addremove.bgp.addremove.TriggerAddRemoveBgpRedistributeStatic      
-      
+      class: triggers.addremove.bgp.addremove.TriggerAddRemoveBgpRedistributeStatic
+
 TriggerAddRemoveBgpNeighborRouteReflectorClient:
     source:
       pkg: genie.libs.sdk
@@ -423,7 +433,7 @@ TriggerAddRemoveBgpRedistributeOspf:
     source:
       pkg: genie.libs.sdk
       class: triggers.addremove.bgp.addremove.TriggerAddRemoveBgpRedistributeOspf
-      
+
 TriggerAddRemoveBgpNeighborAsOverride:
     source:
       pkg: genie.libs.sdk
@@ -605,32 +615,32 @@ TriggerDisableEnablePim6:
 # -----------
 # SHUT-NOSHUT
 # -----------
-      
+
 TriggerShutNoShutBsrRpInterface:
     source:
       pkg: genie.libs.sdk
       class: triggers.shutnoshut.interface.shutnoshut.TriggerShutNoShutBsrRpInterface
-      
+
 TriggerShutNoShutBsrRpVrfInterface:
     source:
       pkg: genie.libs.sdk
       class: triggers.shutnoshut.interface.shutnoshut.TriggerShutNoShutBsrRpVrfInterface
-      
+
 TriggerShutNoShutStaticRpInterface:
     source:
       pkg: genie.libs.sdk
       class: triggers.shutnoshut.interface.shutnoshut.TriggerShutNoShutBsrRpInterface
-      
+
 TriggerShutNoShutStaticRpVrfInterface:
     source:
       pkg: genie.libs.sdk
       class: triggers.shutnoshut.interface.shutnoshut.TriggerShutNoShutBsrRpVrfInterface
-      
+
 TriggerShutNoShutPimNbrInterface:
     source:
       pkg: genie.libs.sdk
       class: triggers.shutnoshut.interface.shutnoshut.TriggerShutNoShutPimNbrInterface
-      
+
 TriggerShutNoShutPimNbrVrfInterface:
     source:
       pkg: genie.libs.sdk
@@ -757,12 +767,12 @@ TriggerModifyEthernetMtu:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.interface.modify.TriggerModifyEthernetMtu
-      
+
 TriggerModifyLoopbackInterfaceIp:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.interface.modify.TriggerModifyLoopbackInterfaceIp
-      
+
 TriggerModifyLoopbackInterfaceIpv6:
     source:
       pkg: genie.libs.sdk
@@ -1375,17 +1385,17 @@ TriggerAddRemoveEthernetMacAcl:
     source:
       pkg: genie.libs.sdk
       class: triggers.addremove.acl.addremove.TriggerAddRemoveEthernetMacAcl
-      
+
 TriggerAddRemoveEthernetIpAclPermit:
     source:
       pkg: genie.libs.sdk
       class: triggers.addremove.acl.addremove.TriggerAddRemoveEthernetIpAclPermit
-      
+
 TriggerAddRemoveEthernetIpAclDeny:
     source:
       pkg: genie.libs.sdk
       class: triggers.addremove.acl.addremove.TriggerAddRemoveEthernetIpAclDeny
-      
+
 TriggerAddRemoveVlanIpAclPermit:
     source:
       pkg: genie.libs.sdk
@@ -1686,7 +1696,7 @@ TriggerClearIpv6MrouteVrfAll:
     source:
       pkg: genie.libs.sdk
       class: triggers.clear.mcast.clear.TriggerClearIpv6MrouteVrfAll
-      
+
 # =========================================================
 #                   FEATURE: MSDP
 # =========================================================
@@ -1745,7 +1755,7 @@ TriggerUnconfigConfigMsdpSaFilterIn:
     source:
       pkg: genie.libs.sdk
       class: triggers.unconfigconfig.msdp.unconfigconfig.TriggerUnconfigConfigMsdpSaFilterIn
-      
+
 TriggerUnconfigConfigMsdpSaFilterOut:
     source:
       pkg: genie.libs.sdk
@@ -1755,27 +1765,27 @@ TriggerUnconfigConfigMsdpSaLimit:
     source:
       pkg: genie.libs.sdk
       class: triggers.unconfigconfig.msdp.unconfigconfig.TriggerUnconfigConfigMsdpSaLimit
-      
+
 TriggerUnconfigConfigMsdpDescription:
     source:
       pkg: genie.libs.sdk
       class: triggers.unconfigconfig.msdp.unconfigconfig.TriggerUnconfigConfigMsdpDescription
-      
+
 TriggerUnconfigConfigMsdpMeshGroup:
     source:
       pkg: genie.libs.sdk
       class: triggers.unconfigconfig.msdp.unconfigconfig.TriggerUnconfigConfigMsdpMeshGroup
-      
+
 TriggerUnconfigConfigMsdpKeepaliveHoldtime:
     source:
       pkg: genie.libs.sdk
       class: triggers.unconfigconfig.msdp.unconfigconfig.TriggerUnconfigConfigMsdpKeepaliveHoldtime
-      
+
 TriggerUnconfigConfigMsdpReconnectInterval:
     source:
       pkg: genie.libs.sdk
       class: triggers.unconfigconfig.msdp.unconfigconfig.TriggerUnconfigConfigMsdpReconnectInterval
-      
+
 TriggerUnconfigConfigMsdpOriginatorId:
     source:
       pkg: genie.libs.sdk
@@ -1783,52 +1793,52 @@ TriggerUnconfigConfigMsdpOriginatorId:
 
 # -----------
 # MODIFY
-# -----------      
+# -----------
 TriggerModifyMsdpOriginatorId:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.msdp.modify.TriggerModifyMsdpOriginatorId
-      
+
 TriggerModifyMsdpSaFilterIn:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.msdp.modify.TriggerModifyMsdpSaFilterIn
-      
+
 TriggerModifyMsdpSaFilterOut:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.msdp.modify.TriggerModifyMsdpSaFilterOut
-      
+
 TriggerModifyMsdpSaLimit:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.msdp.modify.TriggerModifyMsdpSaLimit
-      
+
 TriggerModifyMsdpMeshGroup:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.msdp.modify.TriggerModifyMsdpMeshGroup
-      
+
 TriggerModifyMsdpKeepaliveHoldtime:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.msdp.modify.TriggerModifyMsdpKeepaliveHoldtime
-      
+
 TriggerModifyMsdpReconnectInterval:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.msdp.modify.TriggerModifyMsdpReconnectInterval
-      
+
 TriggerModifyMsdpDescription:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.msdp.modify.TriggerModifyMsdpDescription
-      
+
 TriggerModifyMsdpPeerConnectedSource:
     source:
       pkg: genie.libs.sdk
       class: triggers.modify.msdp.modify.TriggerModifyMsdpPeerConnectedSource
-      
+
 TriggerModifyMsdpPeerAs:
     source:
       pkg: genie.libs.sdk
@@ -1953,7 +1963,7 @@ TriggerAddRemoveAdvertiseEvpnMulticast:
     source:
         pkg: genie.libs.sdk
         class: triggers.addremove.trm.addremove.TriggerAddRemoveAdvertiseEvpnMulticast
-      
+
 # =========================================================
 #                   FEATURE: IGMP(ipv4) / MLD(ipv6)
 # =========================================================
@@ -1980,7 +1990,7 @@ TriggerUnconfigConfigMldVersion:
     source:
       pkg: genie.libs.sdk
       class: triggers.unconfigconfig.mld.unconfigconfig.TriggerUnconfigConfigMldVersion
-      
+
 TriggerUnconfigConfigIgmpJoinGroup:
     source:
       pkg: genie.libs.sdk
@@ -1990,7 +2000,7 @@ TriggerUnconfigConfigMldJoinGroup :
     source:
       pkg: genie.libs.sdk
       class: triggers.unconfigconfig.mld.unconfigconfig.TriggerUnconfigConfigMldJoinGroup
-      
+
 TriggerUnconfigConfigIgmpStaticGroup:
     source:
       pkg: genie.libs.sdk
@@ -2026,12 +2036,12 @@ TriggerAddRemoveIgmpVersion:
     source:
       pkg: genie.libs.sdk
       class: triggers.addremove.igmp.addremove.TriggerAddRemoveIgmpVersion
-      
+
 TriggerAddRemoveIgmpJoinGroup:
     source:
       pkg: genie.libs.sdk
       class: triggers.addremove.igmp.addremove.TriggerAddRemoveIgmpJoinGroup
-      
+
 TriggerAddRemoveIgmpStaticGroup:
     source:
       pkg: genie.libs.sdk
@@ -2041,17 +2051,17 @@ TriggerAddRemoveMldEnable:
     source:
       pkg: genie.libs.sdk
       class: triggers.addremove.mld.addremove.TriggerAddRemoveMldEnable
-      
+
 TriggerAddRemoveMldVersion:
     source:
       pkg: genie.libs.sdk
       class: triggers.addremove.mld.addremove.TriggerAddRemoveMldVersion
-      
+
 TriggerAddRemoveMldJoinGroup:
     source:
       pkg: genie.libs.sdk
       class: triggers.addremove.mld.addremove.TriggerAddRemoveMldJoinGroup
-      
+
 TriggerAddRemoveMldStaticGroup:
     source:
       pkg: genie.libs.sdk
